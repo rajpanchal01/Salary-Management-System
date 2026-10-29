@@ -1,0 +1,5 @@
+#!/bin/bash -e
+# Production entrypoint: create/migrate the DB, seed it on first boot, then serve.
+bin/rails db:prepare
+bin/rails runner 'if Employee.none? then load Rails.root.join("db/seeds.rb") end'
+exec bin/rails server -b 0.0.0.0 -p "${PORT:-3000}"

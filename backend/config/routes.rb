@@ -12,4 +12,7 @@ Rails.application.routes.draw do
       get :top
     end
   end
+
+  root "static#index"
+  get "*path", to: "static#index", constraints: ->(req) { !req.path.start_with?("/api", "/up") && !req.path.include?(".") }
 end

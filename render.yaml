@@ -1,0 +1,13 @@
+# Render blueprint: one Docker web service. SQLite lives on the container disk and the
+# 10k-employee dataset is re-seeded on boot, so the demo is self-healing on free tier.
+services:
+  - type: web
+    name: salary-management
+    runtime: docker
+    plan: free
+    healthCheckPath: /up
+    envVars:
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: FORCE_SSL
+        value: "false"
