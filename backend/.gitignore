@@ -1,0 +1,10 @@
+/log/*
+/tmp/*
+/storage/*
+!/log/.keep
+!/tmp/.keep
+!/storage/.keep
+/db/*.sqlite3*
+/public/assets
+.bundle
+/config/*.key
