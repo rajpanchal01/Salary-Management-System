@@ -14,7 +14,7 @@ countries and answer the question *"how do we pay people?"* without opening a sp
 | **Deploy** | Single Docker image on Render (Rails serves the API and the built React app) |
 
 > Supporting docs: [Requirements](docs/01-requirements.md) · [Design & trade-offs](docs/02-design.md) ·
-> [AI usage log](docs/03-ai-usage.md) · [Demo script](docs/04-demo-script.md)
+> [AI usage log](docs/03-ai-usage.md) · [Prompts](docs/05-prompts.md) · [Architecture diagrams](docs/06-architecture.md) · [Demo script](docs/04-demo-script.md)
 
 ---
 
