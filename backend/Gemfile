@@ -29,3 +29,5 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+# json 3.x breaks ActiveSupport JSON encoding on this Rails version
+gem "json", "~> 2.10"
