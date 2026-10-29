@@ -30,7 +30,7 @@ speed of lookup, correctness of edits, and defensible numbers.
 ## Key decisions & assumptions
 - Salary = **annual gross, whole units of the employee's local currency** (integer; no float money bugs).
 - One employee = one country = one currency (ISO 4217).
-- Insights computed in SQL on the server (10k rows is trivial for SQLite; median via window functions).
+- Insights are aggregated server-side from one narrow column pluck (~10k rows, a few ms), normalised to USD; keeps median/band logic simple and unit-testable. Revisit with SQL aggregation if the org grows 100x.
 - USD normalisation applied at query time from a static rate table, so changing rates needs no data migration.
 
 ## Stack
